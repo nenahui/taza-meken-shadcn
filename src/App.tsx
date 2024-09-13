@@ -1,10 +1,14 @@
-import { Button } from '@/components/ui/button';
+import { Layout } from '@/components/layout/layout';
+import { Home } from '@/featrues/home';
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 export const App: React.FC = () => {
   return (
-    <>
-      <Button>Click me</Button>
-    </>
+    <Layout>
+      <Routes>
+        <Route path={'/'} element={<Home />} />
+      </Routes>
+    </Layout>
   );
 };
